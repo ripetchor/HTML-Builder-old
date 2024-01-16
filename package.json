@@ -2,6 +2,7 @@
   "name": "html-builder",
   "version": "1.0.0",
   "description": "html-builder task for RSSchool",
+  "type": "module",
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write .",
