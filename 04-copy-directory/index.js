@@ -43,7 +43,6 @@ const clearDirectory = async ({ dirName }) => {
     return Promise.all(direntsPromises);
   } catch (error) {
     stderr.write(`${error}\n`);
-
   }
 };
 

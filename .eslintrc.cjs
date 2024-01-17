@@ -8,6 +8,7 @@ module.exports = {
   plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 13,
+    sourceType: 'module',
   },
   rules: {
     indent: ['error', 2],

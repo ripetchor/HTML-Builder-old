@@ -22,7 +22,7 @@ const mergeStyles = async ({
     const dirents = await readdir(pathToSrcDir, { withFileTypes: true });
 
     const cssFiles = dirents.filter(
-      (dirent) => dirent.isFile() && dirent.name.endsWith('.css')
+      (dirent) => dirent.isFile() && dirent.name.endsWith('.css'),
     );
 
     for await (const file of cssFiles) {
