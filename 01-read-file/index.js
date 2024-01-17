@@ -9,7 +9,7 @@ const readFile = async ({ fileName }) => {
   try {
     const pathToFile = path.resolve(dirname, fileName);
 
-    const readStream = createReadStream(pathToFile, { encoding: 'utf-8' });
+    const readStream = createReadStream(pathToFile);
 
     await pipeline(readStream, stdout);
   } catch (error) {

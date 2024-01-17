@@ -7,7 +7,7 @@ const { stdout, stdin, stderr, exit } = process;
 const writeFile = ({ fileName, readStream = stdin }) => {
   const pathToFile = path.resolve(dirname, fileName);
 
-  const writeStream = createWriteStream(pathToFile, { encoding: 'utf-8' });
+  const writeStream = createWriteStream(pathToFile);
 
   stdout.write('Hello!\n');
 

@@ -15,9 +15,7 @@ const mergeStyles = async ({
     const pathToDestDir = path.resolve(dirname, destDir);
     const pathToBundleFile = path.resolve(pathToDestDir, bundleFileName);
 
-    const writeStream = createWriteStream(pathToBundleFile, {
-      encoding: 'utf-8',
-    });
+    const writeStream = createWriteStream(pathToBundleFile);
 
     const dirents = await readdir(pathToSrcDir, { withFileTypes: true });
 
@@ -27,7 +25,7 @@ const mergeStyles = async ({
 
     for await (const file of cssFiles) {
       const pathToFile = path.resolve(pathToSrcDir, file.name);
-      const readStream = createReadStream(pathToFile, { encoding: 'utf-8' });
+      const readStream = createReadStream(pathToFile);
       readStream.pipe(writeStream);
     }
   } catch (error) {

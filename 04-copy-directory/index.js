@@ -11,7 +11,7 @@ const copyFile = async ({ srcFile, destFile }) => {
     const pathToSrcFile = path.resolve(dirname, srcFile);
     const pathToDestFile = path.resolve(dirname, destFile);
 
-    const readStream = createReadStream(pathToSrcFile, { encoding: 'utf-8' });
+    const readStream = createReadStream(pathToSrcFile);
     const writeStream = createWriteStream(pathToDestFile, {
       encoding: 'utf-8',
     });
